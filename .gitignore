@@ -1,0 +1,14 @@
+# Secrets and environment
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# User uploads and logs
+uploads/
+audit.log
+
+#SQLite database and Flask instance folder
+database.db
+instance/
