@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head><title>MFA Setup</title></head>
+    <body>
+        <h1>Multi-factor Authentication Setup</h1>
+        <p>Scan this QR code with Google Authenticator or Authy app:</p>
+        <img src="data:image/png;base64,{{ qr_data}}" alt="MFA QR code">
+        <p><strong>Can't scan?</strong>Enter this code manually: <code>{{ secret }}</code></p>
+
+        <form action="{{ url_for('login') }}">
+            <input type="submit" value="Continue to Login">
+        </form>
+    </body>
+</html>

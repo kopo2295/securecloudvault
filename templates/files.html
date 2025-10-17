@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your files</title>
+</head>
+<body>
+    <h2>Uploaded Files</h2>
+    <ul>
+        {% for file in files%}
+            <li>
+                {{ file.filename }}
+                <a href="{{ url_for('download_file', file_id=file.id) }}">Download</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="{{ url_for('upload_file') }}">Upload another file</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
